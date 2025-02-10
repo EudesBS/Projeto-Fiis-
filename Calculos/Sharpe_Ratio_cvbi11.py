@@ -2,8 +2,8 @@ import pandas as pd
 import numpy as np
 
 # carrega as tabelas que vão ser usadas
-df_ipca_cvbi11 = pd.read_excel("C:/Users/eudes/OneDrive/Ambiente de Trabalho/Cursos/Projeto PY/Indicadores avançados/Mensal_IPCA_FIIs_CVBI11.xlsx")
-df_selic = pd.read_excel("C:/Users/eudes/OneDrive/Ambiente de Trabalho/Cursos/Projeto PY/Indicadores avançados/Semi Ratio.xlsx")
+df_ipca_cvbi11 = pd.read_excel("seu caminho do arquivo")
+df_selic = pd.read_excel("seu caminho do arquivo")
 
 # Merge entre o bcri11 (FII) e a SELIC
 df_merged = df_ipca_cvbi11[["MesAno_ComoData", "Retorno Mensal Fii"]].merge(
@@ -28,4 +28,4 @@ df_merged["Sharpe Ratio"] = (df_merged["Retorno Mensal Fii"] - df_merged["Retorn
 print(df_merged[["MesAno_ComoData", "Sharpe Ratio"]])
 
 # Salvand o merge em formato excel
-df_merged.to_excel("C:/Users/eudes/OneDrive/Ambiente de Trabalho/Cursos/Projeto PY/Indicadores avançados/Ratio_cvbi11.xlsx")
+df_merged.to_excel("seu caminho do arquivo")
