@@ -1,7 +1,7 @@
 import pandas as pd
 
 # carrega as tabelas que vão ser usadas
-ipca_csv = pd.read_csv("C:/Users/eudes/OneDrive/Ambiente de Trabalho/Cursos/Projeto PY/ipca.csv")
+ipca_csv = pd.read_csv("seu caminho do arquivo/Projeto PY/ipca.csv")
 
 df_ipca = pd.DataFrame(ipca_csv)
 
@@ -17,7 +17,7 @@ duplicados = df_ipca[df_ipca.duplicated(colunas)]
 df_ipca = df_ipca.drop_duplicates(duplicados, keep= 'first')
 
 # Salvando arquivo em excel
-save_local = "C:/Users/eudes/OneDrive/Ambiente de Trabalho/Cursos/Projeto PY/ipca.xlsx"
+save_local = "seu caminho do arquivo/Projeto PY/ipca.xlsx"
 df_ipca.to_excel(save_local, index= False, sheet_name= "IPCA desde 1994")
 
 print(df_ipca.head(15))
