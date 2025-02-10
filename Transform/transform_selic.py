@@ -1,7 +1,7 @@
 import pandas as pd
 
 # carrega o tabelas o csv que vai ser utilizado
-selic_csv = pd.read_csv("C:/Users/eudes/OneDrive/Ambiente de Trabalho/Cursos/Projeto PY/selic.csv")
+selic_csv = pd.read_csv("seu caminho do arquivo/Projeto PY/selic.csv")
 
 df_selic = pd.DataFrame(selic_csv)
 
@@ -17,7 +17,7 @@ duplicados = df_selic[df_selic.duplicated(validar_colunas)]
 df_selic = df_selic.drop_duplicates(duplicados, keep= 'first')
 
 # Salvando arquivo em excel
-save_local = "C:/Users/eudes/OneDrive/Ambiente de Trabalho/Cursos/Projeto PY/selic.xlsx"
+save_local = "seu caminho do arquivo/Projeto PY/selic.xlsx"
 df_selic.to_excel(save_local, index= False, sheet_name= "Selic desde 1994")
 
 print(df_selic.head(15))
