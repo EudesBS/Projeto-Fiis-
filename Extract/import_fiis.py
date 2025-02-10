@@ -16,7 +16,7 @@ data_ipca= tickers_ipca.history(period='5y')
 data_ipca.index = data_ipca.index.tz_localize(None)
 
 # Baixando dados de histórico para tabela xlsx
-data_ipca.to_excel("C:/Users/eudes/OneDrive/Ambiente de Trabalho/Cursos/Projeto PY/ipca-fiis.xlsx", sheet_name="fiis ipca")
+data_ipca.to_excel("Projeto PY/ipca-fiis.xlsx", sheet_name="fiis ipca")
 
 # Atribuindo o histórico dos últimos 5 anos ao data_selic
 data_selic= tickers_selic.history(period='5y')
@@ -25,7 +25,7 @@ data_selic= tickers_selic.history(period='5y')
 data_selic.index = data_ipca.index.tz_localize(None)
 
 # Baixando dados de histórico para tabela xlsx
-data_selic.to_excel("C:/Users/eudes/OneDrive/Ambiente de Trabalho/Cursos/Projeto PY/selic-fiis.xlsx", sheet_name="fiis selic")
+data_selic.to_excel("seu caminho/Projeto PY/selic-fiis.xlsx", sheet_name="fiis selic")
 
 ipca_geral_data = []
 # Laço para pegar ticker por ticker da minha lista
@@ -38,7 +38,7 @@ for ticker in tickers_ipca.tickers:
 df_ipca_geral =  pd.DataFrame(ipca_geral_data)
 
 # Download dados gerais do IPCA
-df_ipca_geral.to_excel("C:/Users/eudes/OneDrive/Ambiente de Trabalho/Cursos/Projeto PY/ipca info geral.xlsx", sheet_name= "Dados gerais IPCA")
+df_ipca_geral.to_excel("seu caminho/Projeto PY/ipca info geral.xlsx", sheet_name= "Dados gerais IPCA")
 
 
 selic_geral_data = []
@@ -52,8 +52,4 @@ for ticker in tickers_selic.tickers:
 df_selic_geral = pd.DataFrame(selic_geral_data)
 
 # Download dados gerais da Selic
-df_selic_geral.to_excel("C:/Users/eudes/OneDrive/Ambiente de Trabalho/Cursos/Projeto PY/selic info geral.xlsx", sheet_name="Dados gerais Selic")
-
-
-
-#data_ipca = yf.download(vet_tickers_ipca, period= '5y', group_by='ticker')
+df_selic_geral.to_excel("seu caminho do arquivo/Projeto PY/selic info geral.xlsx", sheet_name="Dados gerais Selic")
