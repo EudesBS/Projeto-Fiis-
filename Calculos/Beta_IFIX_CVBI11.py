@@ -2,8 +2,8 @@ import pandas as pd
 import numpy as np
 
 # carrega as tabelas que vão ser usadas
-df_ifix_cvbi11 = pd.read_excel("C:/Users/eudes/OneDrive/Ambiente de Trabalho/Cursos/Projeto PY/Indicadores avançados/Mensal_IPCA_FIIs_CVBI11.xlsx")
-df_ifix = pd.read_excel("C:/Users/eudes/OneDrive/Ambiente de Trabalho/Cursos/Projeto PY/Indicadores avançados/IFIX Mensal.xlsx")
+df_ifix_cvbi11 = pd.read_excel("seu caminho do arquivo")
+df_ifix = pd.read_excel("seu caminho do arquivo")
 
 # Merge entre o cvbi11 (FII) e o IFIX
 df_merged = df_ifix_cvbi11[["MesAno_ComoData", "Retorno Mensal Fii"]].merge(
@@ -46,4 +46,4 @@ df_merged["Beta Mensal"] = [None] + betas  # O primeiro mês não terá Beta
 print(df_merged)
 
 # Salvand o merge em formato excel
-df_merged.to_excel("/Users/eudes/OneDrive/Ambiente de Trabalho/Cursos/Projeto PY/Indicadores avançados/Beta_IFIX_cvbi11.xlsx")
+df_merged.to_excel("seu caminho do arquivo")
