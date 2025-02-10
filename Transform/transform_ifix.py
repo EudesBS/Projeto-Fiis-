@@ -1,7 +1,7 @@
 import pandas as pd
 
 # carrega as tabelas que vão ser usadas
-df_ifix = pd.read_csv("C:/Users/eudes/OneDrive/Ambiente de Trabalho/Cursos/Projeto PY/Dados Históricos - Índice Fundos de Investimentos Imobiliários.csv")
+df_ifix = pd.read_csv("seu caminho do arquivo/Projeto PY/Dados Históricos - Índice Fundos de Investimentos Imobiliários.csv")
 
 # Verificando cabeçalhos
 print(df_ifix.head(5))
@@ -16,4 +16,4 @@ df_ifix = df_ifix.drop_duplicates(duplicados, keep= 'first')
 
 # Arrumando o nome das colunas
 df_ifix.columns= ['Data', 'Ultimo', 'Abertura', 'Maxima', 'Minima', 'Volume', 'Var%']
-df_ifix.to_excel("C:/Users/eudes/OneDrive/Ambiente de Trabalho/Cursos/Projeto PY/dados ifix.xlsx", sheet_name= "ifix", index= False)
+df_ifix.to_excel("seu caminho do arquivo/Projeto PY/dados ifix.xlsx", sheet_name= "ifix", index= False)
