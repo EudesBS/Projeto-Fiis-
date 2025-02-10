@@ -3,8 +3,8 @@ import numpy as np
 from scipy.stats import linregress
 
 # carrega as tabelas que vão ser usadas
-df_ipca_cvbi11 = pd.read_excel("C:/Users/eudes/OneDrive/Ambiente de Trabalho/Cursos/Projeto PY/Indicadores avançados/Mensal_IPCA_FIIs_CVBI11.xlsx")
-df_ipca = pd.read_excel("C:/Users/eudes/OneDrive/Ambiente de Trabalho/Cursos/Projeto PY/Indicadores avançados/IPCA.xlsx")
+df_ipca_cvbi11 = pd.read_excel("seu caminho do arquivo")
+df_ipca = pd.read_excel("seu caminho do arquivo")
 
 # Merge entre o CVBI11 (FII) e o IPCA
 df_merged = df_ipca_cvbi11[["MesAno_ComoData", "Retorno Mensal Fii"]].merge(
@@ -47,4 +47,4 @@ df_merged["Beta Mensal"] = [None] + betas  # O primeiro mês não terá Beta
 print(df_merged)
 
 # Salvand o merge em formato excel
-df_merged.to_excel("/Users/eudes/OneDrive/Ambiente de Trabalho/Cursos/Projeto PY/Indicadores avançados/Beta_IPCA_cvbi11.xlsx")
+df_merged.to_excel("seu caminho do arquivo")
